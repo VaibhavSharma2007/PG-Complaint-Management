@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PG Complaint Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>PG Complaint Management System</h1>
+        <p>Submit and manage your complaints easily</p>
+    </header>
+
+    <main>
+
+        <!-- Complaint Form -->
+        <section>
+            <h2>Submit a Complaint</h2>
+
+            <form id="complaintForm">
+
+                <label for="residentName">Resident Name</label>
+                <input type="text" id="residentName" required>
+
+                <label for="roomNumber">Room Number</label>
+                <input type="text" id="roomNumber" required>
+
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Electricity">Electricity</option>
+                    <option value="Water">Water</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="description">Description</label>
+                <textarea id="description" required></textarea>
+
+                <label for="priority">Priority</label>
+                <select id="priority" required>
+                    <option value="">Select Priority</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <button type="submit">Submit Complaint</button>
+
+            </form>
+        </section>
+
+        <!-- Complaints Section -->
+        <section>
+            <h2>Complaints</h2>
+
+            <div>
+                <input type="text" id="searchInput" placeholder="Search complaints...">
+
+                <select id="statusFilter">
+                    <option value="">All Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+            </div>
+
+            <div id="complaintsList"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
